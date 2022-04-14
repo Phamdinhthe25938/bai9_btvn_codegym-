@@ -1,0 +1,40 @@
+html{
+    font-family: Arial;
+}
+.body_computer{
+    width: 265px;
+    height: 200px;
+    padding: 10px;
+    border:1px solid #ccc;
+}
+.key_computer{
+    padding-top: 10px;
+    border-top: 1px solid #ccc;
+    /*margin-top: 20px;*/
+    display: flex;
+    height: 100%;
+
+}
+#display_result{
+    height: 20px;
+}
+.key_number{
+    position: relative;
+}
+.key_number::after{
+    content: "";
+    position: absolute;
+    height: 85%;
+    width: 1px;
+    background-color: #ccc;
+    top: 0;
+    right: 5px;
+
+}
+.btn{
+    width: 40px;
+    text-align: center;
+    background-color: #ccc;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let weight = prompt("Nhap can nang cua ban:");
+    let height = prompt("Nhap chieu cao cua ban:");
+    let  weightInt = parseInt(weight);
+    let heightInt = parseInt(height);
+    let mbi = weightInt/(heightInt*heightInt);
+    if(mbi<18){
+        document.write("Underweight");
+    }
+    else if(mbi<25){
+        document.write("Normal");
+    }
+    else if(mbi<30){
+        document.write("Overweight");
+    }
+    else{
+        document.write("Obese");
+    }
+</script>
+</body>
+</html>

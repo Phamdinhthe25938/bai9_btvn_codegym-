@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .content{
+            margin-left: 200px;
+            margin-top: 200px;
+        }
+        #btn_no{
+            margin-left: 70px;
+            position: absolute;
+        }
+        #btn_yes{
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<div class="content">
+    <h2>DO YOU LOVE ME?</h2>
+    <button id="btn_yes">Yes</button>
+    <button id="btn_no">No</button>
+</div>
+
+</body>
+</html>
+<script>
+    let btn_yesElement = document.getElementById("btn_yes");
+    btn_yesElement.onclick= function (){
+        alert("Toi dong y !")
+    }
+    let btn_noElement = document.getElementById('btn_no');
+    btn_noElement.onmouseover= function (){
+        let x = Math.round(Math.random() * window.innerWidth)
+        let y = Math.round(Math.random() * window.innerHeight)
+        btn_noElement.style.left = x+'px';
+        btn_noElement.style.top = y+'px';
+    }
+</script>

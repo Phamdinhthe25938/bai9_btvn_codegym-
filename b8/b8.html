@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="bai1()">Bai 1</button>
+<button onclick="bai2()">Bai 2</button>
+<button>Bai 3</button>
+<button>Bai 4</button>
+<button>Bai 5</button>
+<button onclick="bai6()">Bai 6</button>
+<button onclick="bai7()">Bai 7</button>
+<button onclick="bai8()">Bai 8</button>
+<button onclick="bai9()">Bai 9</button>
+<button onclick="bai10()">Bai 10</button>
+<button onclick="bai12()">Bai 12</button>
+</body>
+</html>
+<script>
+    function bai1(){
+        let c = parseInt(prompt("Nhap nhiet do hien tai:"));
+        let f = 32+9/5*c;
+        alert('nhiet do F hien tai la:'+f);
+    }
+    function bai2(){
+        let m = parseInt(prompt("nhap so met(m):"));
+        let ft = m*3.2808;
+        alert("feet:"+ft);
+    }
+    function bai3(){
+        let a=parseInt(prompt("nhap canh cua hinh vuong:"));
+        let S = a*a;
+        alert('Dien tich hinh vuong la:'+S);
+    }
+    function bai4(){
+        let a= parseInt(prompt('nhap chieu dai hcn :'));
+        let b = parseInt(prompt("nhap chieu rong hcn :"));
+        let S = a*b;
+        alert("dien tich hinh chu nhat ;"+S);
+    }
+    function bai5(){
+        let a= parseInt(prompt('nhap canh 1 cua tam giac :'));
+        let b = parseInt(prompt("nhap canh 2 cua tam giac :"));
+        let S = 1/2*a*b*Math.sin(90);
+        alert("Dienj tich tam giac la:"+S);
+    }
+    function bai6(){
+        let a = parseInt(prompt("nhap so a:"));
+        let b = parseInt(prompt("nhap so b:"));
+        if(b===0){
+            if(a===0){
+                alert("ptr vo so no")
+            }
+            else{
+                alert('ptr co no X=0')
+            }
+        }
+        else{
+            if(a===0){
+                alert("ptr vo no ")
+            }
+            else{
+                alert("ptr co no la x="+ (-b)/a)
+            }
+        }
+    }
+    function bai7() {
+        let a = parseInt(prompt("nhap so a:"));
+        let b = parseInt(prompt("nhap so b:"));
+        let c = parseInt(prompt("nhap so c:"));
+        if(a===0){
+            let x= (-c)/b;
+            alert("ptr co no duy nhat x="+x);
+        }
+        else{
+            let delta = Math.pow(b,2)-4*a*c;
+            alert(delta)
+            let x1= (-b+Math.sqrt(delta))/(2*a)
+            let x2 = (-b-Math.sqrt(delta))/(2*a);
+            if(delta>0){
+                alert("ptr co hai nghiem la x1="+x1+"  va x2="+x2);
+            }
+            else if(delta<0){
+                alert("ptr vo no")
+            }
+            else{
+                alert("ptr co 1 nghiem duy nhat la x= "+ (-b)/2*a);
+            }
+        }
+    }
+    function  bai8(){
+        let a= parseInt(prompt("nhap canh a:"))
+        let b = parseInt(prompt("nhap canh b"));
+        let c= parseInt(prompt("nhap canh c:"));
+        if(a>0 && b>0 && c>0){
+            if(a + b > c && b + c > a && a + c > b){
+                alert("a,b,c tm la canh cua tam giac")
+            }
+            else {
+                alert("a,b,c k tm canh tam giac")
+            }
+        }
+        else{
+            alert("a,b,c k tm canh cua tam giac")
+        }
+    }
+    function bai9(){
+        let soDien = parseInt(prompt("nhap so dien gia dinh ban dung"));
+        let soTien;
+        if(soDien<50){
+             soTien = soDien*1678;
+             alert('so tien gia dinh ban phai tra la:'+ soTien);
+        }
+        else if(soDien<100){
+            soTien = 49*1678+(soDien-49)*1734;
+            alert('so tien gia dinh ban phai tra la:'+ soTien);
+        }
+        else if(soDien<200){
+            soTien = 49*1678 +50*1734 *(soDien-99)*2234;
+            alert('so tien gia dinh ban phai tra la:'+ soTien);
+        }
+    }
+    function bai10(){
+        let tienThuNhap = parseInt(prompt("nhap so tien thu nhap hang thang cua ban(trieu vnd):"))
+        if(1<tienThuNhap<=5){
+            tienThue = 5/100* tienThuNhap;
+            alert("tien thue ban phai dong la :"+tienThue)
+        }
+        else if(tienThuNhap<=10){
+            tienThue = 10/100* tienThuNhap;
+            alert("tien thue ban phai dong la :"+tienThue)
+        }
+        else if(tienThuNhap<=18){
+            tienThue = 15/100* tienThuNhap;
+            alert("tien thue ban phai dong la :"+tienThue)
+        }
+    }
+    function bai12(){
+        let a= parseInt(prompt("nhap so tien ban vay:"));
+        let t = parseInt(prompt("nhap so thang ban vay"));
+        let total=0;
+        for(let i=1;i<=t;i++){
+            total += (7/100)*a;
+        }
+        document.write(total);
+    }
+</script>

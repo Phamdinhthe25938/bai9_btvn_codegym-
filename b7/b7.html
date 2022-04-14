@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button onclick="bai1();">Bai 1</button>
+    <button onclick="bai2()">Bai 2</button>
+    <button onclick="bai3()">Bai 3</button>
+    <button onclick="bai4()">Bai 4</button>
+    <button onclick="bai5()">Bai 5</button>
+    <button onclick="bai6()">Bai 6</button>
+    <button onclick="bai7()">Bai 7</button>
+    <button onclick="bai8()">Bai 8</button>
+</body>
+</html>
+<script>
+    function bai8(){
+        let a= parseInt(prompt("nhap so tien ban vay:"));
+        let t = parseInt(prompt("nhap so thang ban vay"));
+        let total=0;
+        for(let i=1;i<=t;i++){
+            total += (7/100)*a;
+        }
+        document.write(total);
+    }
+    function bai1(){
+        let a = parseInt(prompt("nhap so a:"));
+        let b= parseInt(prompt("nhap so b :"));
+        if(a%b==0){
+            alert(a+"chia het cho"+b)
+        }
+    }
+    function bai2(){
+        let a= parseInt(prompt("nhap so tuoi cua ban:"));
+        if(a<15){
+            alert('ban chua du tuoi vao lop 10')
+        }
+        else{
+            alert("ban da du tuoi vao lop 10")
+        }
+    }
+    function bai3(){
+        let a= parseInt(prompt("nhap so tuoi cua ban:"));
+        if(a<0){
+            alert("ban vua nhap 1 so nguyen am")
+        }
+        else{
+            alert("ban vua nhap 1 so nguyen duong")
+        }
+    }
+    function bai4(){
+        let a = parseInt(prompt("nhap so a:"));
+        let b= parseInt(prompt("nhap so b :"));
+        let c= parseInt(prompt("nhap so c :"));
+        if(a>b && a>c){
+            alert(a+"la so lon nhat ")
+        }
+        else{
+            if(b>c){
+                alert(b+"la so lon nhat");
+            }
+            else{
+                alert(c+"la so lon nhat ")
+            }
+        }
+    }
+    function bai5(){
+        let a= parseInt(prompt("nhap so diem cua ban:"));
+        if(a>9){
+            alert("ban xep loai A")
+        }
+        else if(a>8){
+            alert("ban xep loai B")
+        }
+        else if(a>7){
+            alert("ban xep loai C")
+        }
+        else if(a>6){
+            alert("ban xep loai D")
+        }
+        else{
+            alert("ban hoc giot nhu bo ")
+        }
+    }
+    function bai6(){
+        let a= parseInt(prompt("Nhap doanh thu ban hang(trieu vnd) :"));
+        let money;
+           if(a>10){
+               alert("ban nhan dc 2 tieu")
+           }
+           else if(a>9){
+               alert("ban nhan dc 1.5 trieu")
+           }
+           else if(a>8){
+               alert("ban nhan dc 1 tr")
+           }
+           else
+               alert('ban k cos tien thuong')
+    }
+    function bai7(){
+        let soPhut= parseInt(prompt("nhap so phut ban da goi:"));
+        let money;
+        if(soPhut<3){
+            money = soPhut*2500;
+            alert(money);
+        }
+        else if(soPhut<=5){
+            money = 3*2500 + (soPhut-3)*3000;
+            alert(money)
+        }
+        else
+            money = 3*2500 + 2*3000 +(soPhut-5)*4000;
+        alert(money);
+    }
+</script>

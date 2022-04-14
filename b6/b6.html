@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="" style="margin:100px 200px">
+    <input type="checkbox" name="" onclick="g();" id="1" value="1">Good
+    <br>
+    <input type="checkbox" name="" onclick="ch();" id="2">Cheap
+    <br>
+    <input type="checkbox" name="" onclick="fast()" id="3">Fast
+</form>
+
+</body>
+</html>
+<script>
+      let a = document.getElementById('1');
+      let b= document.getElementById('2');
+      let c= document.getElementById('3');
+      function g(){
+          if(b.checked && c.checked){
+              c.checked =false;
+          }
+      }
+      function ch(){
+          if(a.checked && c.checked){
+              a.checked =false;
+          }
+      }
+      function fast(){
+          if(a.checked&&b.checked){
+              b.checked=false
+          }
+
+      }
+</script>

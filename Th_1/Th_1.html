@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <img  style="width: 100px;" id="myImage" src="https://img4.thuthuatphanmem.vn/uploads/2020/12/25/hinh-anh-tinh-than-bong-da_105536998.jpg"/>
+    <p>Click button below to move the image to right</p>
+    <input type="button"value="Click Me" onclick="moveRight();" />
+</form>
+</body>
+</html>
+<script>
+    let imgObj = null;
+    imgObj = document.getElementById('myImage');
+    function moveRight() {
+        imgObj.style.left = parseInt(imgObj.style.left)+10+'px';
+    }
+    window.onload = init;
+    function init() {
+        imgObj = document.getElementById('myImage');
+        imgObj.style.position = 'relative';
+        imgObj.style.left = '0px';
+    }
+    let temp=1;
+    imgObj.onclick = function (){
+        if(temp===1){
+            document.getElementById('myImage').src="https://recmiennam.com/wp-content/uploads/2018/01/top-hinh-nen-bong-da-dep-87.jpg"
+            temp =2;
+        }
+        else if(temp===2){
+            document.getElementById('myImage').src="https://img.lovepik.com/photo/40016/1448.jpg_wh860.jpg";
+            temp=3;
+        }
+        else{
+            document.getElementById('myImage').src="https://img4.thuthuatphanmem.vn/uploads/2020/12/25/hinh-anh-tinh-than-bong-da_105536998.jpg"
+            temp=1;
+        }
+    }
+</script>

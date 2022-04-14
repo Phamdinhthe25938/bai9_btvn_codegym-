@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img id="img" style="width: 100px;height: 100px" src="https://i.pinimg.com/originals/a9/1b/46/a91b46190f00a3442ff2ba5e9ee7178f.jpg" alt="">
+</body>
+</html>
+<script>
+    let img = document.getElementById('img');
+    let tempt=1;
+    img.onclick = function (){
+        if(tempt===1){
+            document.getElementById('img').src='https://kenh14cdn.com/thumb_w/660/203336854389633024/2021/2/3/photo-1-16123597359191221975188.jpg'
+            tempt=2;
+        }
+        else if(tempt===2){
+            document.getElementById("img").src="https://media.vov.vn/sites/default/files/styles/large/public/2021-04/168852040_1203932463361807_1290347500944242255_n.jpg"
+            tempt=3;
+        }
+        else{
+            document.getElementById("img").src="https://i.pinimg.com/originals/a9/1b/46/a91b46190f00a3442ff2ba5e9ee7178f.jpg"
+            tempt=1;
+        }
+    }
+</script>
